@@ -12,7 +12,8 @@ Selain itu, program ini juga memiliki fitur pencarian lagu yang memungkinkan pen
 * Mencari lagu berdasarkan nama
 
 
-  ![Tampilan](Cuplikan layar 2026-04-22-171852.png)
+  ![Tampilan](tampilan1.png)
+  ![Tampilan](tampilan2.png)
 
 
 
