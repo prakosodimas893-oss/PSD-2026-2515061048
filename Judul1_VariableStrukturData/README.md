@@ -163,6 +163,7 @@ Memastikan program dijalankan langsung, bukan dari file lain.
 main()
 Memanggil fungsi utama untuk menjalankan program.
 
+#output sekaligus penjelsasan
   ![Tampilan](tampilan2.png)
   Saat program dijalankan, pengguna akan melihat beberapa pilihan menu seperti menampilkan playlist, melihat index lagu, menambahkan lagu, mencari lagu, dan keluar dari program. Program akan terus berjalan dan menampilkan menu selama pengguna belum memilih opsi keluar.
 
