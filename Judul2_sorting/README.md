@@ -7,7 +7,7 @@ Proses pengurutan dilakukan oleh fungsi bubble_sort, yang membandingkan nilai da
 def tukar(arr, i, j)
 ini digunakan untuk membuat fungsi menukar dua data dalam array
 
-![tampilan1](.png)
+![gambar](tampilan1.png)
 
 temp = arr[i]
 ini digunakan untuk menyimpan nilai index i sementara
@@ -113,7 +113,7 @@ ini digunakan untuk menjalankan program utama
 
 
 
-![tampilan2](.png)
+![gambar](tampilan2.png)
 
 
 Output dari program ini adalah menampilkan data siswa sebelum dan sesudah diurutkan berdasarkan nilai.
