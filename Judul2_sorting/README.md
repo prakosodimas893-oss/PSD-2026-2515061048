@@ -4,6 +4,7 @@ Kode ini adalah program Python untuk mengurutkan data siswa berdasarkan nilai me
 Proses pengurutan dilakukan oleh fungsi bubble_sort, yang membandingkan nilai dari setiap pasangan data menggunakan arr[j][1]. Jika nilai lebih kecil dari elemen berikutnya, maka ditukar, sehingga hasil akhirnya adalah urutan dari nilai terbesar ke terkecil (descending). Setelah proses sorting selesai, program menampilkan kembali data siswa yang sudah diurutkan berdasarkan nilai tertinggi. Struktur ini menunjukkan bagaimana array bisa menyimpan data kompleks dan bagaimana algoritma sorting diterapkan pada data tersebut.
 def tukar(arr, i, j)
 ini digunakan untuk membuat fungsi menukar dua data dalam array
+tampilan1.png
 
 temp = arr[i]
 ini digunakan untuk menyimpan nilai index i sementara
@@ -106,3 +107,14 @@ ini digunakan untuk memastikan program dijalankan langsung
 
 main()
 ini digunakan untuk menjalankan program utama
+
+tampilan2.png
+Output dari program ini adalah menampilkan data siswa sebelum dan sesudah diurutkan berdasarkan nilai.
+
+Saat program dijalankan, pengguna diminta memasukkan jumlah siswa, lalu memasukkan nama dan nilai masing-masing siswa. Data yang dimasukkan akan disimpan dalam bentuk pasangan (nama, nilai).
+
+Program kemudian menampilkan data sebelum diurutkan, yaitu sesuai dengan urutan saat input. Setelah itu, program melakukan proses pengurutan menggunakan metode bubble sort dengan membandingkan nilai setiap siswa.
+
+Hasil akhir yang ditampilkan adalah data siswa yang sudah diurutkan dari nilai tertinggi ke nilai terendah (descending). Jika kondisi perbandingan diubah, maka urutan bisa menjadi dari nilai terendah ke tertinggi (ascending).
+
+https://youtu.be/uGXpBRV_Yyg
