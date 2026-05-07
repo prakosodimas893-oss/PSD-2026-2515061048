@@ -150,7 +150,7 @@ Digunakan agar fungsi main() hanya berjalan jika file dijalankan langsung.
 main()
 Memanggil fungsi utama program.
 
-![GAMBAR](tampilan2.png)
+<img src="tampilan2.png" width="700">
 
 https://youtu.be/U8WDno3MSTU
 
