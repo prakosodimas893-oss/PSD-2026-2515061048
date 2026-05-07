@@ -150,4 +150,4 @@ Digunakan agar fungsi main() hanya berjalan jika file dijalankan langsung.
 main()
 Memanggil fungsi utama program.
 
-![GANBAR](ssoutput.png)
+![GAMBAR](ssoutput.png)
