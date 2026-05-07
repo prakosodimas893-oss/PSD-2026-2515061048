@@ -149,8 +149,7 @@ Digunakan agar fungsi main() hanya berjalan jika file dijalankan langsung.
 
 main()
 Memanggil fungsi utama program.
-
-<img src="tampilan2.png" width="700">
+![GAMBAR](Cuplikan layar 2026-05-07 204725.png)
 
 https://youtu.be/U8WDno3MSTU
 
