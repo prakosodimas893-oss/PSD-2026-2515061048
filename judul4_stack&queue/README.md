@@ -3,7 +3,10 @@ Program ini merupakan implementasi struktur data queue (antrian) menggunakan lin
 
 Program memiliki beberapa fitur utama, yaitu menambahkan pasien ke antrian (enqueue), memanggil pasien terdepan (dequeue), melihat pasien berikutnya (peek), dan menampilkan seluruh daftar antrian (display). Selain itu, program juga menggunakan menu interaktif agar pengguna dapat memilih operasi yang diinginkan. Dengan menggunakan linked list, proses penambahan dan penghapusan pasien menjadi lebih efisien karena tidak memerlukan pergeseran data seperti pada queue berbasis array.
 ![GAMBAR](code4.png)
-           penjelasan code
+
+                                      penjelasan code
+
+                                      
 class Node:
 
 Mendefinisikan class Node sebagai elemen dasar pada struktur linked list. Setiap node digunakan untuk menyimpan data pasien dan referensi ke node berikutnya.
@@ -299,5 +302,16 @@ Mengecek apakah file Python dijalankan secara langsung sebagai program utama.
 main()
 
 Menjalankan fungsi main() sebagai titik awal eksekusi program.
+
+
 ![GAMBAR](output.jpg)
+
+
         penjelasan output
+
+
+Output pada program antrian rumah sakit digunakan untuk menampilkan hasil dari setiap proses yang dilakukan pengguna melalui menu interaktif. Program akan menampilkan menu utama yang berisi pilihan operasi seperti menambahkan pasien, memanggil pasien, melihat pasien berikutnya, menampilkan seluruh antrian, dan keluar dari program. Ketika pengguna memilih suatu menu, program akan memberikan respon berupa pesan konfirmasi, misalnya pasien berhasil masuk antrian, pasien dipanggil dokter, atau daftar seluruh pasien yang sedang menunggu. Output tersebut membantu pengguna memahami kondisi queue secara real-time.
+
+Selain itu, program juga memiliki output untuk penanganan kesalahan dan validasi data. Jika queue kosong, program akan menampilkan pesan bahwa antrian pasien kosong sehingga pengguna mengetahui bahwa tidak ada data yang dapat diproses. Program juga menampilkan pesan kesalahan ketika pengguna memasukkan input yang tidak sesuai atau memilih menu yang tidak tersedia. Dengan adanya output tersebut, sistem menjadi lebih mudah digunakan, informatif, dan mampu mencegah terjadinya kesalahan selama program dijalankan.
+
+https://youtu.be/XEM_mZLPW24?si=xLWLE3XXQO91s4_S
