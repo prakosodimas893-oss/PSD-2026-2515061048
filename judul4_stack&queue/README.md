@@ -3,4 +3,4 @@ Program ini merupakan implementasi struktur data queue (antrian) menggunakan lin
 
 Program memiliki beberapa fitur utama, yaitu menambahkan pasien ke antrian (enqueue), memanggil pasien terdepan (dequeue), melihat pasien berikutnya (peek), dan menampilkan seluruh daftar antrian (display). Selain itu, program juga menggunakan menu interaktif agar pengguna dapat memilih operasi yang diinginkan. Dengan menggunakan linked list, proses penambahan dan penghapusan pasien menjadi lebih efisien karena tidak memerlukan pergeseran data seperti pada queue berbasis array.
 ![GAMBAR](code4.png)
-![GAMBAR](output.png)
+![GAMBAR](output.jpg)
