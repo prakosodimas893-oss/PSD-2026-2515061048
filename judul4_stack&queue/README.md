@@ -304,7 +304,7 @@ main()
 Menjalankan fungsi main() sebagai titik awal eksekusi program.
 
 
-![GAMBAR](output.jpg)
+![GAMBAR](output4.jpg)
 
 
         penjelasan output
