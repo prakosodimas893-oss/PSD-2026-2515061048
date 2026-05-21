@@ -3,7 +3,7 @@ Sistem leaderboard menggunakan Binary Search Tree (BST) adalah sistem yang digun
 
 Sistem ini memiliki beberapa fitur utama seperti menambahkan player baru, menghapus player, mencari skor tertentu, menampilkan ranking tertinggi maupun terendah, mencari skor tertinggi, dan menghitung jumlah player. Traversal BST juga digunakan untuk menampilkan ranking secara terurut. Traversal dari kanan ke kiri menghasilkan ranking tertinggi terlebih dahulu, sedangkan traversal kiri ke kanan menghasilkan ranking terendah terlebih dahulu. Sistem ini cocok digunakan pada game, leaderboard kompetisi, sistem ranking turnamen, maupun aplikasi penilaian lainnya.
 
-
+![GAMBAR](ss_code_5.)
 class Node:
 Membuat class Node sebagai tempat penyimpanan data player dalam BST.
 
