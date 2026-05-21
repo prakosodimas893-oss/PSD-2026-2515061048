@@ -5,381 +5,303 @@ Sistem ini memiliki beberapa fitur utama seperti menambahkan player baru, mengha
 
 
 class Node:
+Membuat class Node sebagai tempat penyimpanan data player dalam BST.
 
-Membuat class Node sebagai struktur dasar BST.
+def init(self, nama, skor):
+Constructor yang dijalankan saat object Node dibuat.
 
-    def __init__(self, nama, skor):
+self.nama = nama
+Menyimpan nama player ke dalam node.
 
-Constructor Node yang dijalankan saat object Node dibuat.
-
-        self.nama = nama
-
-Menyimpan nama player.
-
-        self.skor = skor
-
+self.skor = skor
 Menyimpan skor player.
 
-        self.left = None
+self.left = None
+Pointer child kiri, awalnya kosong.
 
-Pointer child kiri.
-
-        self.right = None
-
-Pointer child kanan.
+self.right = None
+Pointer child kanan, awalnya kosong.
 
 class LeaderboardBST:
+Class utama untuk mengelola BST leaderboard.
 
-Class utama untuk mengelola leaderboard BST.
-
-    def __init__(self):
-
+def init(self):
 Constructor BST.
 
-        self.root = None
+self.root = None
+Root BST awalnya kosong.
 
-Root awal masih kosong.
-
-    def insert_node(self, root, nama, skor):
-
+def insert_node(self, root, nama, skor):
 Function rekursif untuk memasukkan node baru.
 
-        if root is None:
-
+if root is None:
 Jika posisi kosong ditemukan.
 
-            return Node(nama, skor)
+return Node(nama, skor)
+Membuat node baru.
 
-Buat node baru.
-
-        if skor < root.skor:
-
+if skor < root.skor:
 Jika skor lebih kecil dari root.
 
-            root.left = self.insert_node(root.left, nama, skor)
-
+root.left = self.insert_node(root.left, nama, skor)
 Masuk ke subtree kiri.
 
-        elif skor > root.skor:
+elif skor > root.skor:
+Jika skor lebih besar dari root.
 
-Jika skor lebih besar.
-
-            root.right = self.insert_node(root.right, nama, skor)
-
+root.right = self.insert_node(root.right, nama, skor)
 Masuk ke subtree kanan.
 
-        return root
+return root
+Mengembalikan root setelah insert selesai.
 
-Mengembalikan root.
+def insert(self, nama, skor):
+Function utama insert.
 
-    def insert(self, nama, skor):
+self.root = self.insert_node(self.root, nama, skor)
+Memulai insert dari root BST.
 
-Function wrapper insert.
-
-        self.root = self.insert_node(self.root, nama, skor)
-
-Mulai insert dari root BST.
-
-    def search_score(self, root, skor):
-
+def search_score(self, root, skor):
 Function rekursif mencari skor.
 
-        if root is None:
-            return None
+if root is None:
+Jika node kosong.
 
-Jika tree kosong atau skor tidak ditemukan.
+return None
+Skor tidak ditemukan.
 
-        if root.skor == skor:
-            return root
+if root.skor == skor:
+Jika skor sama dengan yang dicari.
 
-Jika skor ditemukan.
+return root
+Mengembalikan node yang ditemukan.
 
-        if skor < root.skor:
-
+if skor < root.skor:
 Jika skor lebih kecil.
 
-            return self.search_score(root.left, skor)
-
+return self.search_score(root.left, skor)
 Cari ke kiri.
 
-        return self.search_score(root.right, skor)
-
+return self.search_score(root.right, skor)
 Cari ke kanan.
 
-    def search(self, skor):
+def search(self, skor):
+Function utama search.
 
-Function wrapper search.
-
-        return self.search_score(self.root, skor)
-
+return self.search_score(self.root, skor)
 Mulai pencarian dari root.
 
-    def find_min_node(self, root):
-
+def find_min_node(self, root):
 Mencari node dengan skor terkecil.
 
-        current = root
+current = root
+Pointer traversal sementara.
 
-Pointer sementara.
-
-        while current is not None and current.left is not None:
-
+while current is not None and current.left is not None:
 Selama masih ada child kiri.
 
-            current = current.left
+current = current.left
+Terus bergerak ke kiri.
 
-Berpindah ke kiri.
-
-        return current
-
+return current
 Mengembalikan node terkecil.
 
-    def delete_node(self, root, skor):
-
+def delete_node(self, root, skor):
 Function rekursif menghapus node.
 
-        if root is None:
-            return None
-
+if root is None:
 Jika tree kosong.
 
-        if skor < root.skor:
+return None
+Tidak ada yang dihapus.
 
+if skor < root.skor:
 Jika skor lebih kecil.
 
-            root.left = self.delete_node(root.left, skor)
-
+root.left = self.delete_node(root.left, skor)
 Hapus di subtree kiri.
 
-        elif skor > root.skor:
-
+elif skor > root.skor:
 Jika skor lebih besar.
 
-            root.right = self.delete_node(root.right, skor)
-
+root.right = self.delete_node(root.right, skor)
 Hapus di subtree kanan.
 
-        else:
-
+else:
 Jika node ditemukan.
 
-            if root.left is None and root.right is None:
-
+if root.left is None and root.right is None:
 Node tidak punya child.
 
-                return None
+return None
+Node langsung dihapus.
 
-Hapus node langsung.
-
-            elif root.left is None:
-
+elif root.left is None:
 Hanya punya child kanan.
 
-                return root.right
+return root.right
+Node diganti child kanan.
 
-Ganti node dengan child kanan.
-
-            elif root.right is None:
-
+elif root.right is None:
 Hanya punya child kiri.
 
-                return root.left
+return root.left
+Node diganti child kiri.
 
-Ganti node dengan child kiri.
+else:
+Jika punya dua child.
 
-            else:
-
-Jika node punya dua child.
-
-                successor = self.find_min_node(root.right)
-
+successor = self.find_min_node(root.right)
 Cari successor.
 
-                root.nama = successor.nama
+root.nama = successor.nama
+Ganti nama node.
 
-Ganti nama dengan successor.
+root.skor = successor.skor
+Ganti skor node.
 
-                root.skor = successor.skor
-
-Ganti skor dengan successor.
-
-                root.right = self.delete_node(root.right, successor.skor)
-
+root.right = self.delete_node(root.right, successor.skor)
 Hapus successor asli.
 
-        return root
-
+return root
 Mengembalikan root.
 
-    def delete(self, skor):
+def delete(self, skor):
+Function utama delete.
 
-Wrapper delete.
-
-        self.root = self.delete_node(self.root, skor)
-
+self.root = self.delete_node(self.root, skor)
 Mulai delete dari root.
 
-    def show_ranking_desc(self, root):
-
+def show_ranking_desc(self, root):
 Menampilkan ranking tertinggi ke terendah.
 
-        if root is None:
-            return
+if root is None:
+Jika tree kosong.
 
-Jika kosong berhenti.
+return
+Hentikan function.
 
-        self.show_ranking_desc(root.right)
+self.show_ranking_desc(root.right)
+Traversal kanan dulu.
 
-Traversal kanan dahulu.
+print(f"{root.nama} : {root.skor}")
+Menampilkan nama dan skor.
 
-        print(f"{root.nama} : {root.skor}")
-
-Cetak ranking.
-
-        self.show_ranking_desc(root.left)
-
+self.show_ranking_desc(root.left)
 Traversal kiri.
 
-    def show_ranking_asc(self, root):
-
+def show_ranking_asc(self, root):
 Menampilkan ranking terendah ke tertinggi.
 
-        self.show_ranking_asc(root.left)
+self.show_ranking_asc(root.left)
+Traversal kiri dulu.
 
-Traversal kiri dahulu.
+print(f"{root.nama} : {root.skor}")
+Cetak data player.
 
-        print(f"{root.nama} : {root.skor}")
-
-Cetak data.
-
-        self.show_ranking_asc(root.right)
-
+self.show_ranking_asc(root.right)
 Traversal kanan.
 
-    def find_highest(self, root):
-
+def find_highest(self, root):
 Mencari skor tertinggi.
 
-        while current.right is not None:
+if root is None:
+Jika tree kosong.
 
-Terus ke kanan karena nilai terbesar ada di kanan.
+return None
+Tidak ada data.
 
-        return current
+current = root
+Pointer traversal.
 
-Mengembalikan node terbesar.
+while current.right is not None:
+Selama masih ada child kanan.
 
-    def find_lowest(self, root):
+current = current.right
+Bergerak ke kanan.
 
-Mencari skor terkecil.
+return current
+Mengembalikan skor tertinggi.
 
-        while current.left is not None:
-
-Terus ke kiri.
-
-        return current
-
-Mengembalikan node terkecil.
-
-    def count_player(self, root):
-
+def count_player(self, root):
 Menghitung jumlah player.
 
-        if root is None:
-            return 0
+if root is None:
+Jika tree kosong.
 
-Jika kosong jumlah = 0.
+return 0
+Jumlah = 0.
 
-        return 1 + self.count_player(root.left) + self.count_player(root.right)
-
+return 1 + self.count_player(root.left) + self.count_player(root.right)
 Menjumlahkan seluruh node.
 
 def main():
-
 Function utama program.
 
-    bst = LeaderboardBST()
+bst = LeaderboardBST()
+Membuat object BST leaderboard.
 
-Membuat object leaderboard BST.
-
-    pilih = 0
-
+pilih = 0
 Variabel menu.
 
-    while pilih != 8:
+while pilih != 8:
+Loop program sampai keluar.
 
-Loop program sampai user keluar.
+print("1. Tambah player")
+Menampilkan menu tambah player.
 
-        print("1. Tambah player")
-
-Menu tambah player.
-
-        print("2. Hapus player")
-
+print("2. Hapus player")
 Menu hapus player.
 
-        print("3. Cari skor")
+print("3. Cari skor")
+Menu cari skor.
 
-Menu pencarian skor.
-
-        print("4. Ranking tertinggi")
-
+print("4. Ranking tertinggi")
 Menu ranking descending.
 
-        print("5. Ranking terendah")
-
+print("5. Ranking terendah")
 Menu ranking ascending.
 
-        print("6. Skor tertinggi")
-
+print("6. Skor tertinggi")
 Menu skor tertinggi.
 
-        print("7. Jumlah player")
-
+print("7. Jumlah player")
 Menu jumlah player.
 
-        print("8. Keluar")
+print("8. Keluar")
+Menu keluar.
 
-Keluar program.
+pilih = int(input("Pilih: "))
+Input pilihan menu.
 
-        pilih = int(input("Pilih: "))
-
-Input pilihan user.
-
-        nama = input("Masukkan nama: ")
-
+nama = input("Masukkan nama: ")
 Input nama player.
 
-        skor = int(input("Masukkan skor: "))
-
+skor = int(input("Masukkan skor: "))
 Input skor player.
 
-        bst.insert(nama, skor)
+bst.insert(nama, skor)
+Menambahkan player ke BST.
 
-Tambah player ke BST.
+hasil = bst.search(skor)
+Mencari skor player.
 
-        hasil = bst.search(skor)
-
-Mencari skor pada BST.
-
-        bst.show_ranking_desc(bst.root)
-
+bst.show_ranking_desc(bst.root)
 Menampilkan ranking tertinggi.
 
-        bst.show_ranking_asc(bst.root)
-
+bst.show_ranking_asc(bst.root)
 Menampilkan ranking terendah.
 
-        highest = bst.find_highest(bst.root)
-
+highest = bst.find_highest(bst.root)
 Mencari skor tertinggi.
 
-        bst.count_player(bst.root)
-
+bst.count_player(bst.root)
 Menghitung jumlah player.
 
-if __name__ == "__main__":
-    main()
+if name == "main":
+Mengecek apakah file dijalankan langsung.
 
+main()
 Menjalankan program utama.
 
 Output sistem berupa menu interaktif leaderboard yang berjalan di terminal atau console. User dapat menambahkan player beserta skor, mencari skor tertentu, melihat ranking dari tertinggi maupun terendah, menghapus player, melihat skor tertinggi, dan menghitung jumlah player yang tersimpan dalam BST. Semua data disimpan dalam bentuk struktur Binary Search Tree sehingga data selalu tersusun otomatis berdasarkan skor.
