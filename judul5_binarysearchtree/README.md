@@ -1,4 +1,4 @@
-                          SISTEM RANKING LEADERBOARD
+                                           SISTEM RANKING LEADERBOARD
 Sistem leaderboard menggunakan Binary Search Tree (BST) adalah sistem yang digunakan untuk menyimpan dan mengelola data pemain beserta skor mereka dalam bentuk struktur pohon biner terurut. Pada sistem ini setiap node menyimpan nama pemain, skor, serta pointer ke child kiri dan kanan. Aturan BST diterapkan berdasarkan skor, yaitu jika skor lebih kecil maka data ditempatkan di subtree kiri, sedangkan jika skor lebih besar ditempatkan di subtree kanan. Dengan konsep ini proses pencarian, penambahan, dan penghapusan data dapat dilakukan lebih cepat dibanding pencarian linear biasa.
 
 Sistem ini memiliki beberapa fitur utama seperti menambahkan player baru, menghapus player, mencari skor tertentu, menampilkan ranking tertinggi maupun terendah, mencari skor tertinggi, dan menghitung jumlah player. Traversal BST juga digunakan untuk menampilkan ranking secara terurut. Traversal dari kanan ke kiri menghasilkan ranking tertinggi terlebih dahulu, sedangkan traversal kiri ke kanan menghasilkan ranking terendah terlebih dahulu. Sistem ini cocok digunakan pada game, leaderboard kompetisi, sistem ranking turnamen, maupun aplikasi penilaian lainnya.
@@ -305,6 +305,9 @@ Mengecek apakah file dijalankan langsung.
 
 main()
 Menjalankan program utama.
+
+
+![GAMBAR](output.png)
 
 Output sistem berupa menu interaktif leaderboard yang berjalan di terminal atau console. User dapat menambahkan player beserta skor, mencari skor tertentu, melihat ranking dari tertinggi maupun terendah, menghapus player, melihat skor tertinggi, dan menghitung jumlah player yang tersimpan dalam BST. Semua data disimpan dalam bentuk struktur Binary Search Tree sehingga data selalu tersusun otomatis berdasarkan skor.
 
