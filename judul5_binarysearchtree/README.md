@@ -312,3 +312,5 @@ Menjalankan program utama.
 Output sistem berupa menu interaktif leaderboard yang berjalan di terminal atau console. User dapat menambahkan player beserta skor, mencari skor tertentu, melihat ranking dari tertinggi maupun terendah, menghapus player, melihat skor tertinggi, dan menghitung jumlah player yang tersimpan dalam BST. Semua data disimpan dalam bentuk struktur Binary Search Tree sehingga data selalu tersusun otomatis berdasarkan skor.
 
 Fungsi utama sistem ini adalah untuk mengelola data ranking secara cepat dan terurut menggunakan konsep Binary Search Tree. Sistem memanfaatkan traversal BST untuk menampilkan ranking dan menggunakan operasi insert, delete, serta search untuk mempermudah pengelolaan leaderboard. Implementasi seperti ini umum digunakan pada game online, turnamen, sistem nilai, dan aplikasi yang membutuhkan pengurutan skor secara otomatis.
+
+https://youtu.be/T_R_3KOjKVU
