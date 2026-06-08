@@ -276,5 +276,4 @@ Mengecek apakah file dijalankan langsung oleh Python.
 
 Output dari sistem ini berupa tampilan menu interaktif di terminal yang memungkinkan pengguna menambah barang, menampilkan seluruh data inventaris, dan mencari barang berdasarkan kode. Saat menampilkan data, sistem akan menunjukkan slot penyimpanan, kode barang, nama barang, dan stok yang tersimpan. Kegunaan sistem ini adalah untuk membantu pengelolaan inventaris gudang sederhana agar lebih cepat dan terstruktur, terutama dalam pencarian data barang secara efisien tanpa harus mengecek satu per satu seperti pada list biasa.
 
-main()
-Menjalankan fungsi utama program.
+https://youtu.be/vQzzISuRNZw?si=Bojf3qyma2p1WXA- 
