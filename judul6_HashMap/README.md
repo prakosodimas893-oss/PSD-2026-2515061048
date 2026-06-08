@@ -5,6 +5,10 @@ Ketika terjadi collision atau dua key menghasilkan indeks yang sama, sistem ini 
 class SlotState:
 Baris ini membuat sebuah class bernama SlotState. Class ini tidak digunakan untuk membuat objek, tetapi hanya sebagai tempat menyimpan konstanta status slot pada hash table.
 
+
+![GAMBAR].(code_6.png)
+
+
 EMPTY = 0
 Menandakan slot masih kosong dan belum pernah digunakan.
 
