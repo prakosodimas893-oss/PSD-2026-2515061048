@@ -6,7 +6,7 @@ class SlotState:
 Baris ini membuat sebuah class bernama SlotState. Class ini tidak digunakan untuk membuat objek, tetapi hanya sebagai tempat menyimpan konstanta status slot pada hash table.
 
 
-![GAMBAR].(code_6.png)
+![GAMBAR](code_6.png)
 
 
 EMPTY = 0
@@ -271,7 +271,7 @@ if name == "main":
 Mengecek apakah file dijalankan langsung oleh Python.
 
 
-
+![GAMBAR](output.png)
 
 
 Output dari sistem ini berupa tampilan menu interaktif di terminal yang memungkinkan pengguna menambah barang, menampilkan seluruh data inventaris, dan mencari barang berdasarkan kode. Saat menampilkan data, sistem akan menunjukkan slot penyimpanan, kode barang, nama barang, dan stok yang tersimpan. Kegunaan sistem ini adalah untuk membantu pengelolaan inventaris gudang sederhana agar lebih cepat dan terstruktur, terutama dalam pencarian data barang secara efisien tanpa harus mengecek satu per satu seperti pada list biasa.
